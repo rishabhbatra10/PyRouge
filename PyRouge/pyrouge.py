@@ -17,7 +17,7 @@ class Rouge:
     beta = 1
 
     @staticmethod
-    def my_lcs_grid(x, y):
+    def __my_lcs_grid(x, y):
         n = len(x)
         m = len(y)
 
