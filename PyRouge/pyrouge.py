@@ -61,7 +61,7 @@ class Rouge:
         return mask_x
 
     @staticmethod
-    def rouge_l(cand_sents, ref_sents):
+    def rouge_l(self, cand_sents, ref_sents):
         lcs_scores = 0.0
         cand_unigrams = get_unigram_count(chain(*cand_sents))
         ref_unigrams = get_unigram_count(chain(*ref_sents))
@@ -71,7 +71,7 @@ class Rouge:
             for ref_sent in ref_sents:
                 # aligns = []
                 # Rouge.lcs(ref_sent, cand_sent, aligns)
-                Rouge.my_lcs(cand_sent, ref_sent, cand_token_mask)
+                self.my_lcs(cand_sent, ref_sent, cand_token_mask)
 
                 # for i in aligns:
                 #     ref_token_mask[i] = 1
