@@ -42,9 +42,8 @@ class Rouge:
 
         return table
 
-    @staticmethod
-    def my_lcs(x, y, mask_x):
-        table = Rouge.my_lcs_grid(x, y)
+    def my_lcs(self, x, y, mask_x):
+        table = self.my_lcs_grid(x, y)
         i = len(x)
         j = len(y)
 
